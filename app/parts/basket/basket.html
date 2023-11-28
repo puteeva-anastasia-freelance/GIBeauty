@@ -1,0 +1,70 @@
+<div class="container">
+	<!--#include virtual="/parts/shop-category/shop-category.html" -->
+</div>
+<section class="basket">
+	<div class="container basket__container">
+		<h1 class="h3 basket__title">Ваша корзина</h1>
+		<div class="basket__table">
+			<div class="basket__header">
+				<div class="basket__col-1"></div>
+				<div class="basket__col-2">
+					<span class="basket__subtitle">товар</span>
+				</div>
+				<div class="basket__col-3">
+					<span class="basket__subtitle">цена</span>
+				</div>
+				<div class="basket__col-4">
+					<span class="basket__subtitle">кол-во</span>
+				</div>
+				<div class="basket__col-5">
+					<span class="basket__subtitle">сумма</span>
+				</div>
+			</div>
+			<!-- Строки с товарами будут добавлены сюда с помощью JS -->
+		</div>
+		<div class="basket__promocode">
+			<span class="basket__promocode-title">Введите промокод</span>
+			<form action="#" class="basket__promocode-form">
+				<div class="basket__promocode-wrap">
+					<div class="basket__promocode-inner">
+						<input type="text" placeholder="Введите ваш скидочный код, чтобы получить скидку"
+							class="basket__promocode-input">
+					</div>
+					<span class="basket__promocode-txt"></span>
+				</div>
+				<button type="button" class="basket__promocode-button button" aria-label="Отправить промокод">
+					<svg width="94" height="75" viewBox="0 0 94 75" xmlns="http://www.w3.org/2000/svg"
+						class="basket__promocode-button-svg">
+						<circle cx="37.0303" cy="37.0303" r="36.0303" stroke-width="2" />
+						<line x1="37.0312" y1="36.5455" x2="84.0312" y2="36.5455" stroke-width="2" />
+						<path d="M94 36.8333L83.3182 43.6172V30.0495L94 36.8333Z" class="basket__promocode-button-svg-path" />
+					</svg>
+					<span class="basket__promocode-button-txt">Использовать</span>
+				</button>
+			</form>
+		</div>
+		<div class="basket__calculation">
+			<div class="basket__calculation-wrap">
+				<span class="basket__calculation-title">сумма</span>
+				<span class="basket__calculation-number" id="totalSummaProducts"></span>
+			</div>
+			<div class="basket__calculation-wrap">
+				<span class="basket__calculation-title">доставка</span>
+				<span class="basket__calculation-number" id="costDelivery"></span>
+			</div>
+			<div class="basket__calculation-wrap">
+				<span class="basket__calculation-title"><b>итого</b></span>
+				<span class="basket__calculation-number">
+					<b id="inTotalSumma"></b>
+					<b id="inTotalSummaWithSale"></b>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="container transitions__container basket__transitions">
+		<div class="transitions">
+			<a href="product-category.html" class="transitions__link-in-shop button">Вернуться в&nbsp;магазин</a>
+			<a href="ordering.html" class="transitions__link-design button button__accent">Оформить заказ</a>
+		</div>
+	</div>
+</section>

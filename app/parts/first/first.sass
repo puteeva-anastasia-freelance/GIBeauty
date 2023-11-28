@@ -1,0 +1,83 @@
+.first
+	&__bg
+		padding: 15.9% 0 18.3%
+		background-image: url("../img/dist/img-first.webp"), url("../img/dist/bg-first.webp")
+		background-size: 100%, cover
+		background-repeat: no-repeat
+		background-position: center -60px, top
+
+		@media (min-width: 768.1px)
+			background: left bottom / cover url(../img/dist/first.webp) no-repeat
+		
+		@media (max-width: 768px)
+			padding-top: 21%
+			padding-bottom: 55%
+
+		@media (max-width: 576px)
+			background-position: center 60px, top
+			margin-top: -74px
+
+		@media (max-width: 370px)
+			padding-bottom: 100%
+			background-position: center 47%, top
+
+	&__wrap
+		margin-left: 6.45%
+		max-width: 570px
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+
+		@media (max-width: 1700px)
+			margin-left: 3.225%
+
+		@media (max-width: 1450px)
+			margin-left: 0
+
+		@media (max-width: 1300px)
+			max-width: 45%
+
+		@media (max-width: 980px)
+			max-width: 55%
+
+		@media (max-width: 768px)
+			max-width: 100%
+
+		@media (max-width: 576px)
+			margin-top: 25.2%
+
+	&__title
+		text-align: center
+		@include adaptiv-font(89, 34)
+		animation: fadeIn ease-in-out 1.5s
+
+	&__subtitle
+		font-family: $tenor-font
+		text-align: center
+		line-height: 159%
+		margin: 8px auto 0
+		@include adaptiv-font(30, 18)
+		text-transform: uppercase
+		width: 97%
+		animation: fadeIn ease-in-out 1.5s 1.5s backwards
+
+		@media (max-width: 370px)
+			margin-top: 15px
+			margin-left: 6px
+
+		&-2
+			@media (max-width: 370px)
+				display: block
+				margin-left: -67px
+
+		&-3
+			@media (max-width: 370px)
+				display: block
+				margin-left: 95px
+
+	&__button
+		margin-top: 55px
+		animation: fadeIn ease-in-out 2s 2.5s backwards
+
+		@media (max-width: 576px)
+			margin-top: 9%

@@ -1,0 +1,591 @@
+.banners
+	position: relative
+
+	&__wrap
+		height: 100%
+		box-sizing: border-box
+
+	&__wrap-1
+		position: relative
+		padding-top: 13.3%
+		display: flex
+		flex-wrap: wrap
+		padding-bottom: 8.7%
+		background: left top / cover url(../img/dist/banner-1-576.webp) no-repeat #e5c0ba
+
+		@media (min-width: 576px)
+			background-image: url(../img/dist/banner-1-small.webp)
+
+		@media (min-width: 768.1px)
+			background-image: url(../img/dist/banner-1.webp)
+
+		@media (max-width: 1350px)
+			background-position-y: -45px
+
+		@media (max-width: 992px)
+			background-position-x: 40%
+			background-position-y: 0
+
+		@media (max-width: 768px)
+			background-size: 100%
+			padding-top: 67.3%
+			padding-bottom: 13%
+
+	&__title
+		font-family: $tenor-font
+		@include adaptiv-font(55, 16)
+		text-transform: uppercase
+		transform: rotate(14deg)
+		position: absolute
+		left: 9.2%
+
+		@media (max-width: 1800px)
+			left: 3.47%
+
+		@media (max-width: 1350px)
+			top: 15%
+
+		@media (max-width: 992px)
+			transform: none
+
+		@media (max-width: 768px)
+			width: 100%
+			display: none
+
+		&-inner
+			display: none
+
+			@media (max-width: 768px)
+				display: block
+				position: static
+				margin: 0
+
+			@media (max-width: 576px)
+				margin-left: 2.8%
+				text-align: center
+
+	&__includes
+		font-family: $tenor-font
+		@include adaptiv-font(30, 10)
+		text-transform: uppercase
+		display: block
+		margin-top: 11.5%
+		margin-left: 9.73%
+		margin-bottom: 19px
+		width: 100%
+
+		@media (max-width: 1800px)
+			margin-left: 4%
+
+		@media (max-width: 992px)
+			display: none
+
+	&__inner
+		background-color: rgba(255, 255, 255, 0.2)
+		border-radius: 0 183px 183px 0
+		display: inline-block
+		padding-left: 9.1%
+		padding-right: 7%
+		padding-bottom: 1.8%
+		padding-top: 1.08%
+
+		@media (max-width: 1800px)
+			padding-left: 3.37%
+
+		@media (max-width: 992px)
+			padding-top: 90px
+
+		@media (max-width: 768px)
+			padding-top: 18px
+			padding-left: 8.3%
+			width: 79%
+			padding-bottom: 1%
+
+		@media (max-width: 359.98px)
+			width: 100%
+
+	&__list
+		list-style-type: none
+		padding: 0
+		margin-left: 13px
+		margin-top: 0
+		margin-bottom: 0
+
+		@media (max-width: 768px)
+			margin-top: 16px
+			margin-left: 0
+
+		&-item
+			@include adaptiv-font(20, 12)
+			line-height: 180%
+			padding-left: 17.5px
+			position: relative
+
+			@media (max-width: 768px)
+				line-height: 175%
+				padding-left: 10.5px
+
+			&::before
+				position: absolute
+				left: 0
+				top: 50%
+				background-color: $txt
+				border-radius: 50%
+				width: 3px
+				height: 3px
+				content: ''
+
+				@media (max-width: 768px)
+					width: 2px
+					height: 2px
+
+	&__buy
+		margin-top: auto
+		margin-left: 4.3%
+		margin-bottom: 0
+
+		@media (max-width: 992px)
+			width: 100%
+			display: flex
+			align-items: center
+
+		@media (max-width: 768px)
+			margin-left: 8.3%
+			margin-top: -8px
+			flex-wrap: wrap
+			margin-right: 8.3%
+
+	&__prices
+		@media (max-width: 992px)
+			margin-right: 10%
+			margin-top: 20px
+
+		@media (max-width: 768px)
+			margin-top: 20px
+			width: 40%
+			margin-bottom: 17px
+
+		@media (max-width: 359.98px)
+			width: 100%
+
+	&__price
+		font-weight: 500
+		@include adaptiv-font(40, 16)
+		display: block
+		margin-bottom: 13px
+		margin-left: 3px
+
+		@media (max-width: 768px)
+			font-weight: bold
+			margin-bottom: 0
+			margin-left: 0
+
+		&-instead
+			display: none
+
+			@media (max-width: 768px)
+				display: inline-block
+				@include adaptiv-font(20, 12)
+				margin-left: 0
+				margin-right: -4px
+
+		&_old
+			@include adaptiv-font(20, 12)
+			text-decoration: line-through
+			display: block
+			margin-bottom: 30px
+			margin-left: 3px
+
+			@media (max-width: 768px)
+				display: inline-block
+				margin-bottom: 0
+
+	&__txt
+		font-family: $tenor-font
+		@include adaptiv-font(18, 10)
+		line-height: 179%
+		text-transform: uppercase
+		max-width: 270px
+		display: inline-block
+		margin-left: 22px
+		margin-bottom: -1px
+
+		@media (max-width: 992px)
+			max-width: 240px
+
+		@media (max-width: 768px)
+			margin-left: 36.5px
+			line-height: 137%
+			margin-top: 4px
+			max-width: 207px
+
+		@media (max-width: 359.98px)
+			margin-left: 20px
+
+	&__button
+		top: 89.5%
+		width: 5%
+		height: auto
+
+		@media (max-width: 992px)
+			top: 91%
+			width: 60px
+
+		@media (max-width: 768px)
+			top: 93%
+
+		@media (max-width: 768px)
+			display: none
+
+		&-icon
+			stroke: $txt
+			fill: transparent
+			transition: stroke .2s ease-in-out
+
+			&:hover
+				stroke: white
+
+				.banners__button-icon-path
+					fill: white
+
+			&-path
+				fill: $txt
+				transition: fill .2s ease-in-out
+
+		&-prev
+			left: 5%
+
+			@media (max-width: 1800px)
+				left: 4%
+
+		&-next
+			right: 5%
+
+			@media (max-width: 1800px)
+				right: 4%
+
+		&:after, &::before
+			content: ''
+
+	.swiper-wrapper
+		align-items: stretch
+
+	.swiper-slide
+		height: auto
+
+	.swiper-pagination-bullet
+		background-color: $txt
+		width: 12px
+		height: 12px
+		margin: 0 7px!important
+		transition: transform .2s ease-in-out
+
+		@media (max-width: 1350px)
+			width: 11px
+			height: 11px
+
+		@media (max-width: 992px)
+			width: 9.5px
+
+		@media (max-width: 768px)
+			width: 8px
+			height: 8px
+			margin: 0 4px!important
+
+		@media (max-width: 576px)
+			width: 7px
+			height: 7px
+
+		&:hover
+			transform: scale(1.2)
+
+	.swiper-pagination-bullets
+		bottom: 7.32%
+
+		@media (max-width: 992px)
+			bottom: 4%
+
+		@media (max-width: 768px)
+			bottom: 2.5%
+
+	&__wrap-2
+		padding-top: 15.1%
+		padding-left: 4.1%
+		padding-right: 4.1%
+		padding-bottom: 12.2%
+		background: linear-gradient(to top, rgba(#F1E5DF, 0), rgba(#F1E5DF, 0)), url(../img/dist/banner-2-576.webp)
+
+		@media (min-width: 576px)
+			background: linear-gradient(to top, rgba(#F1E5DF, 0), rgba(#F1E5DF, 0)), url(../img/dist/banner-2.webp)
+
+		@media (min-width: 768.1px)
+			background: linear-gradient(to right, rgba(#F1E5DF, 1), rgba(#F1E5DF, 0.4)), url(../img/dist/banner-2.webp)
+
+		@media (min-width: 1350.1px)
+			background: right bottom / 50% 100% url(../img/dist/banner-2.webp) no-repeat #F1E5DF
+
+		@media (max-width: 1500px)
+			padding-left: 40px
+			padding-right: 40px
+
+		@media (max-width: 1350px)
+			background-size: contain
+			background-repeat: no-repeat
+			background-position: right bottom
+			background-color: #F1E5DF
+
+		@media (max-width: 768px)
+			background-position: right -180px
+			background-size: contain
+			background-repeat: no-repeat
+			background-color: #F1E5DF
+			padding-top: 93%
+			padding-left: 8.3%
+			padding-right: 8.3%
+
+		@media (max-width: 576px)
+			padding-top: 100%
+			padding-left: 15px
+			padding-right: 15px
+			background-position-y: -95px
+
+		@media (max-width: 450px)
+			background-position-y: -65px
+
+	&__title-2
+		max-width: 50%
+		margin-bottom: 1.15%
+
+		@media (max-width: 768px)
+			max-width: 80%
+
+		@media (max-width: 576px)
+			max-width: 100%
+			text-align: center
+			margin: 0 25px
+
+	&__list-2
+		margin-left: 7px
+
+		@media (max-width: 768px)
+			margin-left: 0
+
+		&-item
+			@include adaptiv-font(25, 12)
+			line-height: 200%
+			padding-left: 21px
+
+			@media (max-width: 576px)
+				padding-left: 10.5px
+
+			&::before
+				width: 4px
+				height: 4px
+
+				@media (max-width: 768px)
+					width: 2px
+					height: 2px
+
+	&__buy-2
+		margin: 0
+		display: flex
+		align-items: center
+		margin-top: 3.3%
+
+		@media (max-width: 768px)
+			width: 370px
+
+		@media (max-width: 576px)
+			width: 320px
+
+		@media (max-width: 359.98px)
+			width: 250px
+
+	&__button-buy
+		margin-bottom: 1%
+		margin-left: 3.25%
+
+	&__wrap-3
+		padding-left: 4.65%
+		padding-bottom: 14.1%
+		padding-top: 15.1%
+		background: linear-gradient(to top, rgba(#F7E4D5, 0), rgba(#F7E4D5, 0)), url(../img/dist/banner-3-1030.webp)
+
+		@media (min-width: 576px)
+			background-image: linear-gradient(to top, rgba(#F7E4D5, 0), rgba(#F7E4D5, 0)), url(../img/dist/banner-3.webp)
+
+		@media (min-width: 768.1px)
+			background: left bottom / cover url(../img/dist/banner-3.webp) no-repeat #F7E4D5	
+
+		@media (max-width: 1500px)
+			padding-right: 40px
+			padding-left: 40px
+
+		@media (max-width: 768px)
+			background-position: right -30px
+			background-size: 178%
+			background-repeat: no-repeat
+			padding-top: 100%
+			background-color: #F7E4D5
+			padding-left: 8.3%
+			padding-right: 8.3%
+
+	&__offer
+		font-family: $tenor-font
+		@include adaptiv-font(30, 15.8)
+		line-height: 130%
+		text-transform: uppercase
+		color: #845440
+		display: block
+		margin-top: 2.55%
+		max-width: 40%
+		margin-bottom: 2.5%
+
+		@media (max-width: 1350px)
+			max-width: 45%
+
+		@media (max-width: 992px)
+			max-width: 57.5%
+
+		@media (max-width: 768px)
+			max-width: 400px
+
+		@media (max-width: 576px)
+			max-width: 100%
+			text-align: center
+
+	&__sponges
+		display: flex
+		align-items: center
+		margin-bottom: 5.3%
+
+		@media (max-width: 450px)
+			flex-direction: column
+
+		@media (max-width: 400px)
+			margin-top: 20px
+			margin-bottom: 30px
+
+		&-col
+			margin-right: 5.1%
+
+			@media (max-width: 992px)
+				margin-right: 5%
+
+			@media (max-width: 768px)
+				margin-right: 10%
+
+			@media (max-width: 576px)
+				margin-right: 0
+				width: 100%
+
+		&-item
+			font-weight: 400
+			@include adaptiv-font(25, 13.5)
+			line-height: 179%
+			display: block
+
+		&-brown
+			color: rgba(132, 84, 64, 1)
+
+	&__txt-3
+		display: none
+
+		@media (max-width: 768px)
+			display: inline-block
+			margin-top: 30px
+			margin-bottom: 30px
+
+		@media (max-width: 576px)
+			margin-top: 0
+			margin-bottom: 0
+
+	&__wrap-4
+		padding-top: 15.1%
+		padding-bottom: 11.1%
+		background: left bottom / cover url(../img/dist/banner-4-980.webp) no-repeat rgba(#f2dacd, 1)
+
+		@media (min-width: 576px)
+			background-image: url(../img/dist/banner-4.webp)
+
+		@media (max-width: 1350px)
+			background-position-x: -30px
+
+		@media (max-width: 992px)
+			background-position-x: -60px
+
+		@media (max-width: 768px)
+			background-size: 170%
+			background-repeat: no-repeat
+			background-position: -400px -150px
+			padding-top: 80%
+			background-color: rgba(#f2dacd, 1)
+
+		@media (max-width: 576px)
+			background-position: -225px -83px
+			padding-top: 85%
+
+	&__title-4
+		margin-left: 4.65%
+		margin-right: 4.65%
+		margin-bottom: 2.4%
+
+		@media (max-width: 1500px)
+			margin-left: 40px
+			margin-right: 40px
+
+		@media (max-width: 768px)
+			margin-left: 8.3%
+			margin-right: 8.3%
+
+	&__inner-4
+		padding-left: 4.6%
+		padding-right: 5%
+		max-width: 875.5px
+		padding-top: 3.2%
+		box-sizing: border-box
+		padding-bottom: 3.6%
+		margin-bottom: 1.6%
+
+		@media (max-width: 1500px)
+			padding-left: 40px
+
+		@media (max-width: 768px)
+			padding-left: 8.3%
+
+		@media (max-width: 576px)
+			width: 95%
+
+	&__present
+		@include adaptiv-font(25, 13.5)
+		line-height: 179%
+		display: block
+
+		@media (max-width: 576px)
+			br
+				display: none
+
+	&__choose
+		@include adaptiv-font(18, 10)
+		display: block
+		margin-top: 3%
+
+	&__buy-4
+		@media (max-width: 1500px)
+			margin-left: 40px
+			margin-right: 40px
+			width: auto
+
+		@media (max-width: 992px)
+			flex-direction: column
+			align-items: flex-start
+
+		@media (max-width: 768px)
+			margin-top: 40px
+			margin-right: 8.3%
+			margin-left: 8.3%
+
+	&__txt-4
+		@media (max-width: 768px)
+			margin-top: 40px
+			margin-bottom: 40px

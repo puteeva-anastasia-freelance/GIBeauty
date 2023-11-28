@@ -1,0 +1,41 @@
+.breadcrumbs
+	display: flex
+	margin-top: 2.2%
+	align-items: center
+
+	@media (max-width: 576px)
+		margin-top: 5.7%
+	
+	&__item
+		@media (max-width: 471px)
+			&:last-of-type
+				display: none
+		
+			&:nth-of-type(2)
+				display: block
+
+	&__link
+		font-weight: 600
+		@include adaptiv-font(20, 12)
+		color: $txt
+		text-decoration: none
+
+		&:hover
+			text-decoration: underline
+
+	&__separator
+		font-weight: 600
+		@include adaptiv-font(20, 12)
+		padding-left: 6px
+		padding-right: 6px
+
+		@media (max-width: 576px)
+			padding-left: 4px
+			padding-right: 4px
+		
+		@media (max-width: 471px)
+			&:last-of-type
+				display: none
+
+			&:first-of-type
+				display: block

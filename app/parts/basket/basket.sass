@@ -1,0 +1,445 @@
+.basket
+	padding-top: 7.8%
+	padding-bottom: 6.4%
+
+	@media (max-width: 768px)
+		padding-top: 49px
+		padding-bottom: 51px
+
+	&__container
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+		@media (max-width: 576px)
+			padding-left: 14px
+			padding-right: 14px
+
+	&__table
+		width: 100%
+
+	&__title
+		margin-left: 4.95%
+		margin-bottom: 3.65%
+		@include adaptiv-font(40, 18)
+
+		@media (max-width: 768px)
+			margin-left: auto
+			margin-right: auto
+
+		@media (max-width: 576px)
+			margin-bottom: -6px
+
+	&__header, &__row
+		display: flex
+		padding-bottom: 0.85%
+		border-bottom: 1px solid #000000
+
+	&__header
+		@media (max-width: 768px)
+			display: none
+
+	&__row
+		padding-top: 32px
+		padding-bottom: 4.4%
+		border-bottom: 1px solid #000000
+
+		@media (max-width: 768px)
+			flex-wrap: wrap
+			padding-bottom: 28px
+
+	&__col
+		&-1
+			width: 25.75%
+			padding-left: 5.1%
+			padding-right: 5.1%
+			box-sizing: border-box
+
+			@media (max-width: 768px)
+				padding-left: 0
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				align-items: flex-start
+
+			@media (max-width: 576px)
+				width: 47.9%
+				padding-right: 5.3%
+
+		&-2
+			width: 27.6%
+			padding-right: 5.3%
+			box-sizing: border-box
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			align-items: flex-start
+
+			@media (max-width: 1350px)
+				width: 25.2%
+				padding-right: 4.1%
+
+			@media (max-width: 992px)
+				padding-right: 5.3%
+				width: 35.8%
+
+			@media (max-width: 768px)
+				width: 50%
+				justify-content: flex-start
+
+			@media (max-width: 576px)
+				padding-right: 0
+				width: 52.1%
+
+		&-3
+			width: 20.2%
+
+			@media (max-width: 768px)
+				display: none
+
+		&-4
+			width: 16.5%
+
+			@media (max-width: 992px)
+				width: 18.2%
+
+			@media (max-width: 768px)
+				width: 24.25%
+
+			@media (max-width: 576px)
+				display: none
+
+		&-5
+			width: auto
+
+			@media (max-width: 992px)
+				display: none
+
+		&-6
+			display: none
+
+			@media (max-width: 992px)
+				display: block
+				margin-top: 25%
+
+			@media (max-width: 768px)
+				margin-top: 16%
+
+		&-7
+			display: none
+
+			@media (max-width: 768px)
+				display: block
+
+		&-8
+			display: none
+
+			@media (max-width: 576px)
+				display: block
+				margin-top: 11.5%
+
+	&__subtitle
+		@include adaptiv-font(20, 14)
+		font-weight: 600
+		text-transform: uppercase
+		display: block
+
+	&__img
+		width: 100%
+		height: auto
+
+	&__name
+		text-decoration: none
+		color: $txt
+		font-weight: 500
+		font-family: $default-font
+		line-height: 150%
+		margin-top: -2%
+		transition: color .2s ease-in-out
+
+		@media (max-width: 768px)
+			margin-top: 0
+
+		&:hover
+			color: $hover
+
+	&__desc
+		@include adaptiv-font(18, 12)
+
+		@media (max-width: 768px)
+			margin-top: 5%
+			width: 90%
+
+	&__put-away
+		font-style: italic
+		@include adaptiv-font(18, 12)
+		margin-bottom: 2px
+		margin-left: -6px
+		color: $txt
+
+		@media (max-width: 768px)
+			display: none
+
+		&_bottom
+			display: none
+
+			@media (max-width: 768px)
+				display: block
+				margin-bottom: -1px
+				margin-left: 2px
+				margin-top: 20px
+
+		&:hover
+			font-style: normal
+
+		&-icon
+			margin-right: 10px
+
+			@media (max-width: 1350px)
+				margin-bottom: -2px
+
+			@media (max-width: 576px)
+				width: 8px
+				height: 9px
+				margin-bottom: -1px
+				margin-right: 4px
+
+	&__price
+		@include adaptiv-font(25, 14)
+		display: block
+		margin-bottom: 2.1%
+
+		@media (max-width: 576px)
+			margin-bottom: -1.8%
+
+		&-old
+			@include adaptiv-font(18, 12)
+			text-decoration: line-through
+			min-height: 15.2px
+
+	&__choose-quantity
+		margin-left: -8.1%
+		margin-top: -2px
+
+		@media (max-width: 992px)
+			margin-left: 0
+			margin-right: 0
+
+		&-input
+			@include adaptiv-font(25, 12)
+			width: 60px
+
+			@media (max-width: 768px)
+				width: 45px
+
+			@media (max-width: 576px)
+				width: 25px
+
+	&__summa, &__summa-with-sale
+		@include adaptiv-font(25, 14)
+		display: block
+
+		@media (max-width: 992px)
+			margin-top: 7%
+
+		@media (max-width: 576px)
+			margin-top: 0.9%
+
+	&__summa-without-sale
+		@include adaptiv-font(18, 12)
+		text-decoration: line-through
+		min-height: 15.2px
+
+	&__promocode
+		margin-top: 4.2%
+		margin-left: 4.9%
+		width: 51.6%
+
+		@media (max-width: 992px)
+			margin-left: 0
+
+		@media (max-width: 768px)
+			width: 45%
+
+		@media (max-width: 576px)
+			width: 100%
+			margin-top: 11.4%
+			padding-bottom: 40px
+			border-bottom: 1px solid #000
+
+		&-form
+			display: flex
+			justify-content: space-between
+			margin-top: 2.5%
+			align-items: center
+			flex-wrap: wrap
+
+			@media (max-width: 768px)
+				flex-wrap: wrap
+				justify-content: center
+
+		&-title
+			font-family: $tenor-font
+			@include adaptiv-font(30, 16)
+			text-transform: uppercase
+
+		&-wrap
+			width: 84.6%
+
+			@media (max-width: 576px)
+				width: 100%
+
+		&-inner
+			position: relative
+
+			&::after
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				height: 1.5px
+				background-color: $txt
+
+		&-input
+			color: rgba($txt, .5)
+			@include adaptiv-font(25, 12)
+			border: 0
+			border-bottom: 1px solid $txt
+			padding-bottom: 10px
+			margin-top: 6px
+			box-sizing: border-box
+			padding-left: 2.9%
+			font-family: $default-font
+			cursor: pointer
+			transition: border-color .2s ease-in-out
+			text-overflow: ellipsis
+			appearance: none
+			border-radius: 0
+			width: 100%
+
+			@media (max-width: 576px)
+				border: 1px solid #000
+				margin: 7.5px auto 0
+				padding-top: 12px
+				padding-left: 11px
+				padding-bottom: 11px
+
+			&::placeholder
+				font-style: italic
+
+			&:hover
+				border-bottom: 1px solid rgba($txt, .8)
+
+			&:focus
+				border: 0
+				outline: 0
+
+		&-txt
+			display: flex
+			align-items: center
+			margin-top: 3px
+
+			svg
+				margin-right: 5px
+
+		&-button
+			width: 11.4%
+			height: auto
+			padding: 0
+			border: 0
+			box-shadow: none
+
+			&:hover
+				background-color: transparent
+
+			@media (max-width: 576px)
+				padding-top: calc(8px + 6 * (100vw / 1920))
+				padding-bottom: calc(8px + 6 * (100vw / 1920))
+				border: 2px solid $txt
+				box-shadow: 5px 5px 7px rgb(0 0 0 / 25%)
+				padding-left: 7.5px
+				padding-right: 7.5px
+				width: 73%
+				margin-top: 15px
+				margin-left: 23.5%
+				margin-right: 23.5%
+
+				&:hover
+					background-color: $txt
+
+			@media (max-width: 360px)
+				width: 128px
+
+			&-txt
+				display: none
+
+				@media (max-width: 576px)
+					display: block
+
+			&-svg
+				width: 100%
+				stroke: $txt
+				fill: transparent
+				transition: stroke .2s ease-in-out
+
+				@media (max-width: 576px)
+					display: none
+
+				&:hover
+					stroke: $hover
+
+					.basket__promocode-button-svg-path
+						fill: $hover
+
+				&-path
+					fill: $txt
+					transition: fill .2s ease-in-out
+
+	&__calculation
+		margin-top: 3.9%
+		@include adaptiv-font(25, 14)
+		width: 24%
+		text-transform: uppercase
+		min-width: 360px
+
+		@media (max-width: 992px)
+			min-width: auto
+			width: 40%
+
+		@media (max-width: 768px)
+			width: 47%
+
+		@media (max-width: 576px)
+			width: 66.7%
+			margin-left: auto
+			margin-top: 18px
+
+		&-wrap
+			display: flex
+			margin-bottom: 4.2%
+
+			@media (max-width: 576px)
+				margin-bottom: 8px
+
+		&-title
+			width: 58.3%
+			display: block
+
+			@media (max-width: 576px)
+				width: 56%
+
+		&-number
+			b
+				display: block
+
+	&__transitions
+		max-width: 1617px
+		margin-top: 6.6%
+
+		@media (max-width: 576px)
+			padding-left: 22.5px
+			padding-right: 22.5px
+
+		@media (max-width: 359.98px)
+			padding-left: 14px
+			padding-right: 14px

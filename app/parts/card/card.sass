@@ -1,0 +1,417 @@
+.card
+	padding-bottom: 1.55%
+
+	@media (max-width: 992px)
+		padding-bottom: 50px
+
+	&__wrap
+		margin: 0 auto
+		width: 89.6%
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+
+		@media (max-width: 768px)
+			flex-wrap: wrap
+			width: 100%
+			margin-top: 7.3%
+
+	&__left
+		width: 40.2%
+		margin-top: 4%
+		position: relative
+
+		@media (max-width: 576px)
+			width: 100%
+
+	.swiper-slide
+		background-size: contain
+		background-position: center
+		background-repeat: no-repeat
+		cursor: pointer
+
+	.gallery-top
+		display: flex
+		align-items: center
+
+		&__img
+			object-fit: cover
+			object-position: center
+			width: 100%
+			display: block
+			height: 100%
+
+		.swiper__slide
+			height: 100%
+
+		&__item
+			&:first-child
+				.img-responsive
+					display: block
+
+	.gallery-thumbs
+		box-sizing: border-box
+		padding: 12px 0
+
+		@media (max-width: 768px)
+			display: none
+
+		.swiper-slide
+			height: 100%
+
+		&__img
+			width: 100%
+			display: block
+			object-fit: cover
+
+		.swiper-slide
+			opacity: 0.6
+			transition: opacity .2s ease-in-out
+
+			&:hover
+				opacity: 0.8
+
+			&-active
+				opacity: 1
+
+	.swiper-button-prev-thumbs
+		left: -40px
+		top: auto
+
+		@media (max-width: 768px)
+			top: 50%
+			left: -30px
+
+		@media (max-width: 359.98px)
+			left: -22px
+
+		&:after
+			content: ''
+			background-image: url("data:image/svg+xml,%3Csvg width='18' height='35' viewBox='0 0 18 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 1L1 18L17 34' stroke='%23151212'/%3E%3C/svg%3E%0A")
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+			width: 16px
+			height: 33px
+			transition: transform .2s ease-in-out
+
+			@media (max-width: 768px)
+				width: 13px
+				height: 25px
+
+		&:hover:after
+			transform: scale(1.1)
+
+	.swiper-button-next-thumbs
+		right: -40px
+		top: auto
+
+		@media (max-width: 768px)
+			top: 50%
+			right: -30px
+
+		@media (max-width: 359.98px)
+			right: -22px
+
+		&:after
+			content: ''
+			background-image: url("data:image/svg+xml,%3Csvg width='18' height='35' viewBox='0 0 18 35' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L17 18L1 34' stroke='%23151212'/%3E%3C/svg%3E%0A")
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+			width: 16px
+			height: 33px
+			transition: transform .2s ease-in-out
+
+			@media (max-width: 768px)
+				width: 13px
+				height: 25px
+
+		&:hover:after
+			transform: scale(1.1)
+
+	&__right
+		width: 50.6%
+		margin-top: 2.8%
+
+		@media (max-width: 768px)
+			margin-top: 8%
+
+		@media (max-width: 576px)
+			margin-left: -2.4%
+			width: 100%
+
+	&__title
+		line-height: 150%
+		@include adaptiv-font(40, 18)
+
+		@media (max-width: 768px)
+			display: none
+
+		&_top
+			display: none
+
+			@media (max-width: 768px)
+				display: block
+				width: 100%
+
+	&__price
+		@include adaptiv-font(40, 20)
+		font-weight: 500
+		display: block
+		margin-top: 6%
+		margin-bottom: 1.6%
+
+		@media (max-width: 768px)
+			font-weight: 700
+			margin-bottom: 0
+			margin-top: 3%
+
+		&-old
+			@include adaptiv-font(20, 12)
+			text-decoration: line-through
+
+	&__buy
+		display: flex
+		align-items: center
+		margin-top: 4.6%
+
+		@media (max-width: 768px)
+			justify-content: space-between
+
+		@media (max-width: 576px)
+			justify-content: flex-start
+
+		@media (max-width: 400px)
+			margin-top: 3.3%
+
+	&__quantity
+		@include adaptiv-font(18, 12)
+		display: block
+		margin-top: 19px
+
+		@media (max-width: 400px)
+			margin-top: 5px
+
+	&__in-basket
+		@include adaptiv-font(18, 12)
+		display: inline-block
+		margin-top: 15px
+		font-weight: 400
+		color: $hover
+
+		&-link
+			@include adaptiv-font(18, 12)
+			color: $hover
+			font-weight: 500
+
+			&:hover
+				text-decoration: none
+
+	&__payment
+		@include adaptiv-font(20, 12)
+		font-weight: 500
+		color: $txt
+		text-transform: uppercase
+		display: block
+		margin-top: 3.7%
+		transition: color .2s ease-in-out
+
+		@media (max-width: 400px)
+			margin-top: 5%
+
+		&:hover
+			color: $hover
+
+	&__desc
+		border-top: 1px solid #000000
+		margin-top: 6.5%
+
+		&-hidden
+			display: none
+
+			@media (max-width: 992px)
+				display: block
+
+		&-txt, &-list
+			@include adaptiv-font(25, 12)
+			line-height: 180%
+			max-width: 720px
+
+			@media (max-width: 992px)
+				max-width: 100%
+				line-height: 175%
+
+		&-list
+			padding-left: 38px
+			list-style-type: none
+			margin-top: 3.2%
+
+			@media (max-width: 992px)
+				padding-left: 18px
+
+			&-item
+				position: relative
+
+				&:before
+					position: absolute
+					width: 4px
+					height: 4px
+					border-radius: 50%
+					background-color: $txt
+					content: ''
+					display: block
+					left: -20px
+					top: 23%
+
+					@media (max-width: 992px)
+						top: 15px
+						width: 2px
+						height: 2px
+						left: -10px
+
+					@media (max-width: 768px)
+						top: 13px
+
+					@media (max-width: 576px)
+						top: 11px
+
+	&__inner
+		width: 50.55%
+		margin-left: auto
+		margin-top: 11px
+
+		@media (max-width: 992px)
+			width: 100%
+			border-top: 1px solid #000000
+			margin-top: 5%
+
+		@media (max-width: 576px)
+			width: calc(100% + 4.8%)
+			margin-left: -2.4%
+			margin-left: -2.4%
+			border-top: 1px solid #000000
+			margin-top: 10.5%
+			padding-top: 1.4%
+
+	&__more
+		@include adaptiv-font(25, 14)
+		font-weight: 500
+		display: flex
+		align-items: center
+		padding: 0
+		color: $txt
+
+		@media (max-width: 576px)
+			margin-top: 6%
+
+		&:hover
+			color: $hover
+
+			.card__more-icon
+				stroke: $hover
+
+		&-icon
+			margin-left: 15px
+			width: 12px
+			height: auto
+			fill: transparent
+			stroke: $txt
+
+			@media (max-width: 1500px)
+				width: 11px
+			
+			@media (max-width: 1100px)
+				width: 10px
+			
+			@media (max-width: 750px)
+				width: 9px
+			
+			@media (max-width: 500px)
+				width: 8px
+			
+			@media (max-width: 400px)
+				width: 7px
+				margin-left: 6px
+
+			&.down
+				transform: rotate(90deg)
+				margin-left: 13px
+
+				@media (max-width: 400px)
+					margin-left: 6px
+					margin-top: 2px
+
+	&__detailed
+		display: none
+
+		&.open
+			display: block
+			margin-top: 2.9%
+			margin-bottom: -3%
+
+			@media (max-width: 576px)
+				margin-bottom: -0.1%
+				margin-top: -0.4%
+
+	&__bottom
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-start
+		max-width: 1600px
+		margin: 6.85% auto 0
+
+		@media (max-width: 768px)
+			margin-top: 12.4%
+
+	&__catalog-button
+		margin-left: 5.4%
+		margin-top: 9.9%
+		padding-left: calc(12px + 10 * (100vw / 1920))
+		padding-right: calc(16px + 16 * (100vw / 1920))
+		display: flex
+		align-items: center
+
+		@media (max-width: 992px)
+			margin-left: auto
+			margin-right: auto
+			margin-top: 28px
+
+		@media (max-width: 576px)
+			padding-left: 12px
+			padding-right: 16px
+
+		&:hover
+			.card__catalog-button-icon
+				fill: #fff
+
+		&-icon
+			margin-right: 8px
+			fill: $txt
+			transition: fill .2s ease-in-out
+
+			@media (max-width: 576px)
+				height: 8px
+				width: 8px
+
+			@media (max-width: 576px)
+				margin-right: 3px
+
+	.swiper-pagination
+		display: none
+
+		@media (max-width: 576px)
+			display: block
+			bottom: -26px
+
+		.swiper-pagination-bullet
+			width: 10.5px
+			height: 10.5px
+			margin: 0 10px!important
+			transition: transform .2s ease-in-out
+
+			&:hover
+				transform: scale(1.2)
+
+			&-active
+				background-color: $txt

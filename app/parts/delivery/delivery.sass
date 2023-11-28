@@ -1,0 +1,165 @@
+.delivery
+	background: top / contain url(../img/dist/bg-delivery-576.webp) no-repeat #F1E4DF
+	padding-top: 6.7%
+	padding-bottom: 5.6%
+	position: relative
+
+	@media (min-width: 576px)
+		background-image: url(../img/dist/bg-delivery.webp)
+
+	@media (max-width: 992px)
+		background-size: 126% 46.5%
+
+	@media (max-width: 576px)
+		padding-top: 13%
+		padding-bottom: 14.6%
+
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		right: 0
+		top: 49.7%
+		background: center / cover url(../img/dist/delivery-img-420.webp) no-repeat
+		border-radius: 268px 0 0 268px
+		width: 41.2%
+		height: 26.1%
+		box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25)
+
+		@media (min-width: 576px)
+			background-image: url(../img/dist/delivery-img.webp)
+
+		@media (max-width: 576px)
+			top: 48%
+			width: 58.4%
+			height: 12.5%
+			background-position-x: 39%
+
+		@media (max-width: 500px)
+			top: 50%
+			width: 55%
+
+		@media (max-width: 360px)
+			top: 52.7%
+			width: 58.4%
+
+		@media (max-width: 359.98px)
+			top: 51%
+			width: 55%
+
+	&__container
+		max-width: 1583px
+
+	&__subtitle
+		&-1
+			margin-top: 6.4%
+
+			@media (max-width: 576px)
+				margin-top: 8%
+
+		&-2
+			margin-top: 6.5%
+			margin-bottom: 2.42%
+
+			@media (max-width: 576px)
+				margin-top: 8%
+
+		&-3
+			margin-top: 7%
+			margin-bottom: 2.4%
+
+			@media (max-width: 576px)
+				margin-top: 5.5%
+				margin-bottom: 5%
+
+	&__txt
+		&-1
+			margin-top: 2.3%
+
+			@media (max-width: 576px)
+				margin-top: 5%
+
+		&-2
+			width: 55.3%
+
+			@media (max-width: 576px)
+				display: none
+
+			&-1
+				display: none
+
+				@media (max-width: 576px)
+					display: block
+					width: 39%
+					margin-top: 5%
+
+			&-2
+				display: none
+
+				@media (max-width: 576px)
+					display: block
+					margin-top: 6.5%
+
+		&-3
+			margin-bottom: 5.6%
+
+			@media (max-width: 576px)
+				margin-bottom: 12.5%
+
+			.br
+				display: none
+
+				@media (max-width: 576px)
+					display: block
+
+		&-bold
+			font-weight: 500
+
+	&__list
+		padding: 0
+		list-style-type: none
+		@include adaptiv-font(20, 12)
+		line-height: 180%
+		border: 1px solid #000000
+		margin-top: 1.4%
+		padding-top: 0.9%
+		margin-left: -2px
+		margin-right: 1px
+		padding-bottom: 1%
+		margin-bottom: 1.75%
+
+		@media (max-width: 576px)
+			margin-top: 5%
+			padding-top: 2.8%
+			line-height: 175%
+			padding-bottom: 4%
+
+		&-item
+			position: relative
+			padding-left: 30px
+
+			@media (max-width: 576px)
+				padding-left: 20px
+
+			&::before
+				content: ''
+				position: absolute
+				top: 16px
+				left: 14px
+				width: 3px
+				height: 3px
+				background-color: $txt
+				display: block
+				border-radius: 50%
+
+				@media (max-width: 1350px)
+					top: 13px
+
+				@media (max-width: 768px)
+					top: 11px
+
+				@media (max-width: 576px)
+					width: 2px
+					height: 2px
+					left: 9px
+					top: 10px

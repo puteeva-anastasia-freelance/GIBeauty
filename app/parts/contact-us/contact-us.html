@@ -1,0 +1,43 @@
+<section class="contact-us">
+	<div class="contact-us__main">
+		<div class="container contact-us__container" id="contact-us">
+			<div class="contact-us__left">
+				<div class="contact-us__inner">
+					<h2 class="contact-us__questions">Остались вопросы?</h2>
+					<h2 class="contact-us__title">Свяжитесь с&nbsp;нами</h2>
+					<picture>
+						<source srcset="img/dist/contact-us.webp" media="(min-width: 992.1px)" width="659" height="497">
+						<source srcset="#" media="(min-width: 0)">
+						<img src="#" alt="Ирина Голубева" class="contact-us__photo">
+					</picture>
+				</div>
+			</div>
+			<form action="#" class="contact-us__right">
+				<div class="contact-us__wrap">
+					<label for="name" class="contact-us__label">Ваше имя *</label>
+					<input type="text" id="name" class="contact-us__input" required name="name">
+				</div>
+				<div class="contact-us__wrap">
+					<label for="email" class="contact-us__label">Email *</label>
+					<input type="email" id="email" class="contact-us__input" required name="email">
+				</div>
+				<div class="contact-us__wrap">
+					<label for="phone" class="contact-us__label">НОМЕР телефона *</label>
+					<input type="text" id="phone" class="contact-us__input mask-phone" required name="phone">
+				</div>
+				<div class="contact-us__wrap">
+					<label for="message" class="contact-us__label">Сообщение *</label>
+					<textarea name="message" id="message" cols="70" rows="1" class="contact-us__textarea"></textarea>
+				</div>
+				<div class="contact-us__last">
+					<label class="input-file contact-us__attachment">
+						<span class="contact-us__file-list"></span>
+						<input type="file" name="file[]" class="hidden">
+						<span class="contact-us__attachment-button button">Приложить</span>
+					</label>
+					<button type="submit" class="button button__accent contact-us__submit">Отправить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>

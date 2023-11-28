@@ -1,0 +1,136 @@
+.reviews
+	background-color: $hover
+	position: relative
+	z-index: 1
+	padding-top: 154px
+	padding-left: 14.4%
+	padding-right: 14.4%
+	padding-bottom: 4.2%
+
+	@media (max-width: 1700px)
+		padding-left: 0
+		padding-right: 0
+
+	@media (max-width: 768px)
+		padding-top: 102px
+		padding-bottom: 4.1%
+
+	&__container
+		padding-left: 48px
+		padding-right: 48px
+
+	&__title
+		@include adaptiv-font(53, 16)
+
+	&__swiper
+		padding-top: 3.1%
+
+		@media (max-width: 1700px)
+			max-width: 1100px
+			margin: 0 auto
+
+	&__img
+		width: 100%
+		height: auto
+
+	&__button
+		top: 90.4%
+		width: 5%
+		height: auto
+
+		@media (max-width: 1350px)
+			top: 92%
+
+		@media (max-width: 992px)
+			top: 64.5%
+
+		&-icon
+			stroke: $txt
+			fill: transparent
+			transition: stroke .2s ease-in-out
+
+			&-path
+				fill: $txt
+				transition: fill .2s ease-in-out
+
+			@media (max-width: 992px)
+				display: none
+
+			&-left, &-right
+				display: none
+				stroke: $txt
+				fill: transparent
+				transition: stroke .2s ease-in-out
+
+				@media (max-width: 992px)
+					display: block
+
+		&:hover
+			.reviews__button-icon
+				stroke: white
+
+			.reviews__button-icon-path
+				fill: white
+
+			.reviews__button-icon-right, .reviews__button-icon-left
+				stroke: white
+
+		&-prev
+			left: 5.1%
+
+			@media (max-width: 992px)
+				left: 1%
+
+		&-next
+			right: 5.1%
+
+			@media (max-width: 992px)
+				right: 1%
+
+		&:after, &::before
+			content: ''
+
+	.swiper-pagination-bullet
+		background-color: $txt
+		width: 12px
+		height: 12px
+		margin: 0 7px!important
+		transition: transform .2s ease-in-out
+
+		@media (max-width: 1350px)
+			width: 11px
+			height: 11px
+
+		@media (max-width: 992px)
+			width: 9.5px
+
+		@media (max-width: 768px)
+			width: 8px
+			height: 8px
+			margin: 0 4px!important
+
+		@media (max-width: 576px)
+			width: 7px
+			height: 7px
+
+		&:hover
+			transform: scale(1.2)
+
+	.swiper-pagination-bullets
+		bottom: 6.5%
+
+		@media (max-width: 1350px)
+			bottom: 4%
+
+		@media (max-width: 768px)
+			bottom: 2.5%
+
+	.swiper-slide
+		transform: scale(1)
+		transition: transform .2s ease-in-out
+
+		@media (min-width: 576px)
+			transform: scale(0.95)
+
+	.swiper-slide-next, .swiper-slide-next + .swiper-slide
+		transform: scale(1)

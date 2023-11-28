@@ -1,0 +1,11 @@
+!function(){"use strict";class r{constructor(){this.pathToProductsImages="img/dist/products",this.wrapEl=document.querySelector(".recommendation"),this.swiperWrapperEl=document.querySelector("#recommendation-slider .swiper-wrapper"),this.quantityProductsOnPage=4}renderProducts(e){this.insertProductsIntoPage(e)}insertProductsIntoPage(e){var r,t=+window.location.hash.substring(1),a=[];let n="",d="";for(;a.length<this.quantityProductsOnPage;){var i=Math.floor(Math.random()*e.length);-1===a.indexOf(i)&&a.push(i),-1!==a.indexOf(t)&&a.splice(a.indexOf(t),1)}for(r of a)n+=this.getProductMarkup(e[r]),d+=this.getProductMarkupForSlider(e[r]);this.wrapEl.insertAdjacentHTML("beforeend",n),this.swiperWrapperEl.insertAdjacentHTML("beforeend",d)}getProductMarkup(e){return`<a href="product-card.html#${e.id}" class="recommendation__item">
+			<img src="${this.pathToProductsImages}/${e.category}/${e.imageSmall}" alt="Фотография рекомендуемого товара" class="recommendation__img">
+			<span class="recommendation__subtitle">${e.name}</span>
+		</a>`}formatNumberAndAddCurrencySign(e){return e.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g,"$1 ")+" ₽"}getPriceProductMarkup(e){return`<span class="recommendation__price">${this.formatNumberAndAddCurrencySign(e.price)}</span>`}getPriceOldProductMarkup(e){return null!=e.priceOld?`<span class="recommendation__price-old">${this.formatNumberAndAddCurrencySign(e.priceOld)}</span>`:""}getProductMarkupForSlider(e){var r=this.getPriceProductMarkup(e),t=this.getPriceOldProductMarkup(e);return`<div class="swiper-slide">
+			<a href="product-card.html#${e.id}" class="recommendation__item">
+				<img src="${this.pathToProductsImages}/${e.category}/${e.imageSmall}" alt="${e.name}" class="recommendation__img">
+				<span class="recommendation__subtitle recommendation__subtitle_center">${e.name}</span>
+				${r}
+				${t}
+			</a>
+		</div>`}reloadPage(){window.addEventListener("hashchange",()=>{window.location.reload(),window.scrollTo(0,0)})}}window.addEventListener("load",()=>{var e=new r;e.renderProducts(products),e.reloadPage()})}();

@@ -1,0 +1,49 @@
+.choose-quantity
+	display: flex
+	margin-right: 6.7%
+
+	@media (max-width: 576px)
+		margin-right: 80px
+
+	@media (max-width: 400px)
+		margin-top: -2.8%
+
+	&__button
+		width: 34px
+		height: 34px
+		background-color: $txt
+		border-radius: 50%
+		color: #fff
+		font-weight: 500
+		font-size: 20px
+		transition: transform .2s ease-in-out
+
+		@media (max-width: 576px)
+			display: flex
+			justify-content: center
+			align-items: center
+
+		@media (max-width: 400px)
+			font-size: 12px
+			width: 28px
+			height: 28px
+
+		&:hover
+			transform: scale(1.05)
+
+		&.minus
+			padding-bottom: 4px
+
+	&__input
+		width: 55px
+		border: 0
+		text-align: center
+		font-family: $default-font
+		font-size: 20px
+
+		@media (max-width: 400px)
+			font-size: 12px
+			width: 35px
+
+		&:focus
+			outline: none

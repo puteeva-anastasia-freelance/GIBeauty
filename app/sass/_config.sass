@@ -1,0 +1,69 @@
+$default-font: 'Montserrat', sans-serif
+$tenor-font: 'Tenor Sans', sans-serif
+$txt: #151212
+$hover: #b88874
+
+$maxWidth: 1920
+
+@mixin adaptiv-font($pcSize, $mobSize)
+	$addSize: $pcSize - $mobSize
+	$addMobSize: $addSize + $addSize * 0.7
+
+	@media (max-width: 767px)
+		font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 360px) / #{$maxWidth}))
+
+	@media (min-width: 767px)
+		font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}))
+
+@import '../libs/selectize/dist/css/selectize.css'
+@import '../libs/swiper/swiper-bundle.min.css'
+
+@font-face
+	font-family: 'Tenor Sans'
+	src: url(../fonts/TenorSans-Regular.ttf) format("truetype")
+	font-weight: 400
+	font-display: swap
+
+*
+	-webkit-tap-highlight-color: transparent
+
+html
+	overflow: hidden
+	position: relative
+	height: 100%
+
+body
+	margin: 0
+	font-family: $default-font
+	color: $txt
+	background-color: #FFFFFF
+	overflow-x: hidden
+	position: relative
+	height: 100%
+
+button
+	background-color: transparent
+	outline: none
+	border: 0
+	font-family: $default-font
+	cursor: pointer
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+	-webkit-appearance: none
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus
+	appearance: none
+	-moz-appearance: textfield
+
+.hidden
+	width: 1px
+	height: 1px
+	position: absolute
+	left: -99999px
+	margin: -1px
+
+.swiper-button-prev, .swiper-button-next, .swiper-button-prev:active, .swiper-button-next:active, .swiper-button-prev:focus, .swiper-button-next:focus, .swiper-pagination-bullet, .swiper-pagination-bullet:active, .swiper-pagination-bullet:focus
+	outline: none!important

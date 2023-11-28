@@ -1,0 +1,1 @@
+"use strict";class ProductDTO{constructor(i,t,s,e,h,a,r,c,d,m,g,l,o){this.id=i,this.category=t,this.image=s,this.imageMiddle=e,this.imageSmall=h,this.name=a,this.shortDescription=r,this.price=c,this.priceOld=d,this.quantity=m,this.feature=g,this.images=l,this.imagesMiddle=o}}

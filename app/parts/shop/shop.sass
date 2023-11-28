@@ -1,0 +1,107 @@
+.shop
+	margin-top: 1.75%
+	padding-bottom: 0.1%
+
+	@media (max-width: 576px)
+		padding-top: 4%
+		padding-bottom: 3.8%
+
+	&__container
+		overflow: hidden
+		width: 82.19%
+		box-sizing: border-box
+
+		@media (max-width: 992px)
+			width: 100%
+			padding-left: 26px
+			padding-right: 26px
+
+		@media (max-width: 359.98px)
+			padding-left: 16px
+			padding-right: 16px
+
+	&__title
+		text-align: center
+		@include adaptiv-font(40, 18)
+
+	&__wrap
+		display: flex
+		margin-top: 4.8%
+		margin-right: -6.34%
+		flex-wrap: wrap
+		margin-bottom: -1.9%
+
+		@media (max-width: 576px)
+			margin-top: 7.4%
+			margin-right: -25px
+
+	&__item
+		width: calc(100% / 3 - 5.96%)
+		margin-right: 5.96%
+		margin-bottom: 6.6%
+		position: relative
+
+		@media (max-width: 576px)
+			width: calc(100% / 2 - 25px)
+			margin-right: 25px
+			margin-bottom: 8.5%
+
+	&__link
+		text-decoration: none
+		color: $txt
+		width: 100%
+
+		&:hover
+			.shop__img
+				box-shadow: 5px 5px 7px rgb(0 0 0 / 25%)
+
+			.shop__subtitle
+				color: $hover
+
+	&__img
+		background: linear-gradient(0deg, #D9D9D9, #D9D9D9)
+		display: block
+		width: 100%
+		object-fit: cover
+		transition: box-shadow .2s ease-in-out
+
+	&__subtitle
+		margin-top: 10.4%
+		text-align: center
+		width: 100%
+		transition: color .2s ease-in-out
+
+		@media (max-width: 576px)
+			margin-top: 8%
+
+	&__txt
+		text-align: center
+		@include adaptiv-font(18, 12)
+		margin-top: 3.7%
+
+		@media (max-width: 768px)
+			display: none
+
+	&__price
+		@include adaptiv-font(25, 14)
+		font-weight: 500
+		display: block
+		width: 100%
+		text-align: center
+		margin-top: 6.4%
+
+		&-old
+			display: block
+			@include adaptiv-font(18, 12)
+			text-decoration: line-through
+			margin-top: 0.7%
+			text-align: center
+
+	&__unavailable
+		background-color: $txt
+		position: absolute
+		color: white
+		@include adaptiv-font(18, 12)
+		right: -2px
+		top: 5%
+		padding: 2.15% 10%
